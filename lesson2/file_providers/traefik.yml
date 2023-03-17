@@ -9,7 +9,7 @@ entryPoints:
 
 providers:
   file:
-    directory: "/data3/hongsen/traefik/lesson2/file_providers/providers"
+    directory: "/data3/xxx/traefik/lesson2/file_providers/providers"
     # filename: /path/to/config/dynamic_conf.yml
     # watch: true
 
