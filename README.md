@@ -1,15 +1,17 @@
 ### traefik 学习
 
 
-lesson1  docker-compose 快速开始
+[docker-compose 快速开始](./lesson1/)
 
-lesson2 二进制文件启动,负载到2个自定义服务
+[lesson2 二进制文件启动,负载到2个自定义服务](./lesson2/)
 
-lesson3 负载到容器进程
+[lesson3 负载到容器进程](./lesson3/)
 
-traefik-simple 简单配置
+[traefik-simple 简单配置](./traefik-simple/)
 
 ### Routers Services Providers Middlewares
+
+
 Routers
 在Traefik中，Routers是将传入的请求路由到正确的服务的机制。Routers可以根据请求的主机名、路径、请求头、请求方法等进行匹配，并将请求转发到相应的Service。以下是Routers的定义和一个示例：
 
@@ -27,6 +29,8 @@ http:
 ```
 
 ### Services
+
+
 在Traefik中，Services是实际处理请求的后端应用程序。Services可以是容器、Kubernetes Pod、虚拟机等。Traefik支持多种类型的Service，例如HTTP、TCP、UDP、gRPC等。以下是Services的定义和一个示例：
 
 定义
@@ -42,7 +46,10 @@ http:
         servers:
         - url: "http://my-app:8080"
 ```
+
 ### Providers
+
+
 在Traefik中，Providers是用于动态配置Traefik的插件。Traefik支持多种Providers，包括Docker、Kubernetes、Mesos、Consul、ZooKeeper等。以下是Providers的定义和一个示例：
 
 定义
@@ -57,6 +64,9 @@ providers:
 ```
 
 ### Middlewares
+
+
+
 在Traefik中，Middlewares是一种在请求处理过程中添加逻辑的机制。Middlewares可以用于添加安全性、日志记录、重定向、认证等功能。以下是Middlewares的定义和一个示例：
 
 定义
@@ -137,6 +147,8 @@ global:
 ```
 
 #### TLS
+
+
 在Traefik中，TLS用于配置HTTPS。TLS证书用于验证服务器身份，并加密数据传输。以下是TLS配置的定义和一个示例：
 
 定义
@@ -154,6 +166,8 @@ tls:
 ```
 
 #### Access Logging
+
+
 在Traefik中，Access Logging用于记录请求和响应的详细信息。这些日志可以用于监控、故障排除和性能优化等目的。以下是Access Logging的定义和一个示例：
 
 定义
@@ -169,6 +183,8 @@ accessLog:
 ```
 
 #### Tracing
+
+
 在Traefik中，Tracing用于跟踪请求的流经和处理过程。Tracing可以用于诊断问题和优化性能。以下是Tracing的定义和一个示例：
 
 定义
