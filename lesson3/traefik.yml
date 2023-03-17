@@ -1,0 +1,17 @@
+# Global configuration
+global:
+  checkNewVersion: false
+
+# Entry points
+entryPoints:
+  web:
+    address: ":802"
+
+providers:
+  docker:
+    endpoint: unix:///var/run/docker.sock
+    exposedByDefault: true
+    watch: true
+# Logging
+log:
+  level: DEBUG

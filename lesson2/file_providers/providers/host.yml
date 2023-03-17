@@ -1,0 +1,13 @@
+    
+# HTTP routers
+http:
+  routers:
+    host-router:
+      rule: "Host(`example.com`)"
+      service: service-host
+
+  services:
+    service-host:
+      loadBalancer:
+        servers:
+        - url: "http://10.21.248.211:8864"

@@ -1,0 +1,18 @@
+# Global configuration
+global:
+  checkNewVersion: false
+
+# Entry points
+entryPoints:
+  web:
+    address: ":80"
+
+providers:
+  file:
+    directory: "/data3/hongsen/traefik/lesson2/file_providers/providers"
+    # filename: /path/to/config/dynamic_conf.yml
+    # watch: true
+
+# Logging
+log:
+  level: DEBUG

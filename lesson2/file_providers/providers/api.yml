@@ -1,0 +1,13 @@
+    
+# HTTP routers
+http:
+  routers:
+    api-router:
+      rule: "PathPrefix(`/foo`)"
+      service: service-foo
+
+  services:
+    service-foo:
+      loadBalancer:
+        servers:
+        - url: "http://10.21.248.211:8863/foo"
