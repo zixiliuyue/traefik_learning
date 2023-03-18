@@ -6,7 +6,7 @@ services:
     ports:
       - "8110:80"
     labels:
-      # 这个容器接受不了 Host == example.com 的请求
+      # 这个容器接受Host == example.com 的请求
       - traefik.http.routers.my-container.rule=Host(`example.com`)
       # Tell Traefik to use the port 12345 to connect to `my-container`
       - traefik.http.services.my-service.loadbalancer.server.port=80
